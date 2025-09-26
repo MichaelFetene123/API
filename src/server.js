@@ -1,3 +1,10 @@
-import express from 'express';
+const express = require("express");
 const app = express();
-const PORT = 3000;
+
+
+app.get('/', (req, res) => {
+    console.log('hi express server');
+    res.status(200).json({ message: 'Hello' });
+});
+
+module.exports = app
