@@ -3,11 +3,13 @@ const router = Router();
 
 // product routes
 
-router.get("/product", () => {});
+router.get("/product", (req, res) => {
+  res.json({ message: 'message' });
+});
 router.get("/product/:id", () => {});
 router.put("/product/:id", () => {});
 router.post("/product", () => {});
-router.delete("/product/:id", () => { });
+router.delete("/product/:id", () => {});
 
 // update routes
 
@@ -17,10 +19,11 @@ router.put("/update/:id", () => {});
 router.post("/update", () => {});
 router.delete("/update/:id", () => {});
 
-
 // update point routes
 router.get("/updatepoint", () => {});
-router.get("/updatepoint/:id", () => { });
-router.put("/updatepoint/:id", () => { });
-router.post("/updatepoint", () => { });
-router.delete("/updatepoint/:id", () => { });
+router.get("/updatepoint/:id", () => {});
+router.put("/updatepoint/:id", () => {});
+router.post("/updatepoint", () => {});
+router.delete("/updatepoint/:id", () => {});
+
+export default router;
