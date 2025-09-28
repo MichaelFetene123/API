@@ -6,5 +6,9 @@ import jwt from "jsonwebtoken";
 // we need a secret key to create a jwt and to verify a jwt. we can use any string as a secret key but it should be a long and random string. we should not share this secret key with anyone. we can use dotenv to store the secret key in an environment variable
 
 export const createJWT = (user) => {
-const token = jwt.sign({ id: user.id, username: user.username}, )
-}
+  const token = jwt.sign(
+    { id: user.id, username: user.username },
+    process.env.JWT_SECRET
+    );
+    return token;
+};
