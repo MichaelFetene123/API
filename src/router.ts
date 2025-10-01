@@ -10,9 +10,9 @@ router.get("/product", (req, res) => {
 router.get("/product/:id", () => {});
 router.put("/product/:id", body("name").isString(), (req, res) => {
   const errors = validationResult(req);
-
+  console.log(errors);
   if (!errors.isEmpty()) {
-    res.status(400).res.json({ errors: errors.array() });
+    res.status(400).json({ errors: errors.array() });
   }
 });
 router.post("/product", () => {});
