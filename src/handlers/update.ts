@@ -62,6 +62,13 @@ export const updateUpdate = async (req, res) => {
     return res.json({ message: "nope" });
   }
 
-  const updateUpdate = await prisma.update.update({});
+    const updateUpdate = await prisma.update.update({
+        where: {
+          id:req.params.id
+        },
+        data: req.body
+    });
+    
+    res.json({data: updateUpdate})
 };
 export const deleteUpdate = async (req, res) => {};
