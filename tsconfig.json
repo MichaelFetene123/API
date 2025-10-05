@@ -6,7 +6,8 @@
     "strict": false,
     "lib": ["esnext"],
     "esModuleInterop": true,
-    "declaration": true
+    "declaration": true,
+    "target": "ES2015"
   },
   "include": ["src/**/*.ts"]
 }
